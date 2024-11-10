@@ -186,4 +186,5 @@ def top_egypt_problems():
     return render_template('result.html', data=data, column_names=column_names)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Get the PORT from the environment, default to 5000
+    app.run(host="0.0.0.0", port=port)
