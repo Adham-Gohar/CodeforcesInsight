@@ -5,12 +5,17 @@ app = Flask(__name__)
 
 # Configure MySQL connection
 connection = mysql.connector.connect(
-    host='mysql.railway.internal',  # Replace with your MySQL host
-    user='root',  # Replace with your MySQL username
-    password='sApkVSAVJiGRsvCUCIFiqfwZjHhIAqHB',  # Replace with your MySQL password
-    database='railway',  # Replace with your database name
-    auth_plugin='mysql_native_password',
-    connection_timeout=10000  # Increase the timeout to 60 seconds
+    #host='mysql.railway.internal',  # Replace with your MySQL host
+    #user='root',  # Replace with your MySQL username
+    #password='sApkVSAVJiGRsvCUCIFiqfwZjHhIAqHB',  # Replace with your MySQL password
+    #database='railway',  # Replace with your database name
+    #auth_plugin='mysql_native_password',
+    #connection_timeout=10000  # Increase the timeout to 60 seconds
+   host=os.getenv('DB_HOST'),
+    port=os.getenv('DB_PORT'),  # MySQL port
+    user=os.getenv('DB_USER'),
+    password=os.getenv('DB_PASSWORD'),
+    database=os.getenv('DB_NAME')
 )
 
 @app.route('/')
