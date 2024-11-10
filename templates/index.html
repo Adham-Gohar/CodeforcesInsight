@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Codeforces Query App</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            color: #003366;
+            font-size: 2.5rem;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 1rem auto;
+            width: 60%;
+        }
+        label {
+            font-weight: bold;
+            color: #003366;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: calc(100% - 2rem);
+            margin-top: 0.5rem;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #003366;
+            font-weight: bold;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Codeforces Data Query Application</h1>
+    
+    <form action="/login" method="post">
+        <label for="screen_name">Enter Screen Name:</label>
+        <input type="text" id="screen_name" name="screen_name">
+        <button type="submit">See User Attempts & Contests</button>
+    </form>
+    
+    <form action="/show_writer" method="post">
+        <label for="screen_name">Enter Screen Name:</label>
+        <input type="text" id="screen_name" name="screen_name">
+        <button type="submit">Show Competitions as Writer</button>
+    </form>
+    
+    <form action="/problems_by_tag" method="post">
+        <label for="tag">Enter Tag:</label>
+        <input type="text" id="tag" name="tag">
+        <button type="submit">Show Problems by Tag</button>
+    </form>
+
+    <form action="/top_languages" method="get">
+        <button type="submit">Show Top 5 Programming Languages by Speed and Memory Efficiency</button>
+    </form>
+
+    <form action="/top_users_streak" method="get">
+        <button type="submit">Show Top 10 Users by Streak and Problems Solved</button>
+    </form>
+
+    <form action="/top_users_score" method="get">
+        <button type="submit">Show Top 10 Users by Total Scores in Div. 1 & Div. 2 Contests</button>
+    </form>
+
+    <form action="/top_organizations" method="get">
+        <button type="submit">Show Top 5 Organizations by User Ratings in Div. 1 & Div. 2 Contests</button>
+    </form>
+
+    <form action="/top_users_frequency" method="get">
+        <button type="submit">Show Top 5 Users by Contest Participation Frequency</button>
+    </form>
+
+    <form action="/top_auc_users" method="get">
+        <button type="submit">Show Top 10 Users from AUC by Overall Rating in Div. 1 & Div. 2 Contests</button>
+    </form>
+
+    <form action="/top_egypt_problems" method="get">
+        <button type="submit">Show Top 5 Attempted Problem Sets by Users from Egypt</button>
+    </form>
+</body>
+</html>
