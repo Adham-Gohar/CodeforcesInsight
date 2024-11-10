@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 # Configure MySQL connection
 connection = mysql.connector.connect(
-    host='localhost',  # Replace with your MySQL host
+    host='mysql.railway.internal',  # Replace with your MySQL host
     user='root',  # Replace with your MySQL username
-    password='Ag@01211163974',  # Replace with your MySQL password
-    database='codeforces',  # Replace with your database name
+    password='sApkVSAVJiGRsvCUCIFiqfwZjHhIAqHB',  # Replace with your MySQL password
+    database='railway',  # Replace with your database name
     auth_plugin='mysql_native_password',
     connection_timeout=10000  # Increase the timeout to 60 seconds
 )
